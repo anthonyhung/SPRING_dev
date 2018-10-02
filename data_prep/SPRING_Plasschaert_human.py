@@ -3,15 +3,6 @@ from doublet_detector import *
 from collections import defaultdict
 # Adapted from SPRING example at https://github.com/AllonKleinLab/SPRING_dev/blob/master/data_prep/spring_example_HPCs.ipynb
 
-#setting parameters for presentation items
-plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['font.sans-serif'] = 'Arial'
-plt.rc('font', size=14)
-plt.rcParams['pdf.fonttype'] = 42
-
-
-
-
 
 
 #Load in Data (Human)
@@ -59,18 +50,6 @@ D['GSE102580_filtered_normalized_counts_human']['meta']['min_tot'] = 0
 
 for s in sample_name:
     D[s]['total_counts'] = np.sum(D[s]['E'], axis=1).A[:,0]
-
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    ax.hist(D[s]['total_counts'], bins=np.logspace(0, 6, 50))
-    ax.set_xscale('log')
-    ax.set_xlabel('Transcripts per barcode')
-    ax.set_ylabel('Number of barcodes')
-
-
-    ax.plot([D[s]['meta']['min_tot'],D[s]['meta']['min_tot']],ax.get_ylim());
-    title(s)
-
 
     ix = D[s]['total_counts'] >= D[s]['meta']['min_tot']
     print s, np.sum(ix), '/', D[s]['E'].shape[0], np.median(D[s]['total_counts'][ix]), np.mean(D[s]['total_counts'][ix])

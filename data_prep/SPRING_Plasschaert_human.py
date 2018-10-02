@@ -65,9 +65,9 @@ for s in sample_name:
     samp_id_flat = np.append(samp_id_flat, [s] * D[s]['E'].shape[0])
 
 # merge quality metrics
-total_counts = np.zeros(len(samp_id_flat), dtype=int)
-mito_frac = np.zeros(len(samp_id_flat), dtype=float)
-for s in sample_name:
+#total_counts = np.zeros(len(samp_id_flat), dtype=int)
+#mito_frac = np.zeros(len(samp_id_flat), dtype=float)
+#for s in sample_name:
     total_counts[samp_id_flat == s] = D[s]['total_counts']
     mito_frac[samp_id_flat == s] = D[s]['mito_frac']
 

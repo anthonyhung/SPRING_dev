@@ -68,8 +68,8 @@ for s in sample_name:
 #total_counts = np.zeros(len(samp_id_flat), dtype=int)
 #mito_frac = np.zeros(len(samp_id_flat), dtype=float)
 #for s in sample_name:
-    total_counts[samp_id_flat == s] = D[s]['total_counts']
-    mito_frac[samp_id_flat == s] = D[s]['mito_frac']
+#    total_counts[samp_id_flat == s] = D[s]['total_counts']
+#    mito_frac[samp_id_flat == s] = D[s]['mito_frac']
 
 # merge counts matrices
 E = scipy.sparse.vstack([D[s]['E'] for s in sample_name]).tocsc()

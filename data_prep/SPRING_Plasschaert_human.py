@@ -1,6 +1,9 @@
 from spring_helper import *
 from doublet_detector import *
 from collections import defaultdict
+import matplotlib
+matplotlib.use('Agg')
+
 # Adapted from SPRING example at https://github.com/AllonKleinLab/SPRING_dev/blob/master/data_prep/spring_example_HPCs.ipynb
 
 

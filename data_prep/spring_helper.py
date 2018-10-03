@@ -40,7 +40,7 @@ def sparse_zscore(E):
 def average_profile(E, all_genes, gene_set):
     gene_set = [g.upper() for g in gene_set]
     gix = np.array([i for i,g in enumerate(all_genes) if g.upper() in gene_set], dtype=int)
-    if len(gix) == 0: 
+    if len(gix) == 0:
         return np.zeros(E.shape[1])
     else:
         return sparse_zscore(E[:,gix]).mean(1).A.squeeze()
@@ -63,7 +63,7 @@ def load_genes(filename, delimiter='\t', column=0, skip_rows=0):
                 if gene_dict[gene] == 2:
                     i = gene_list.index(gene)
                     gene_list[i] = gene + '__1'
-            else: 
+            else:
                 gene_dict[gene] = 1
                 gene_list.append(gene)
     return gene_list
@@ -125,9 +125,9 @@ def load_text(file_data,delim='\t'):
             current_col = 0
             found_float = False
             while not found_float and current_col < len(dat):
-                try: 
+                try:
                     tmp = float(dat[current_col])
-                    
+
                     try:
                         rowdat = np.array(map(float, dat[current_col:]))
                         ncol = len(rowdat)
@@ -163,7 +163,7 @@ def load_text(file_data,delim='\t'):
 
     nrow = row_ix - start_row + 1
     E = scipy.sparse.coo_matrix((X_data, (X_row, X_col)), dtype=float, shape=(nrow, ncol)).tocsc()
-    
+
     return E
 
 def text_to_sparse(file_data,delim='\t',start_row=0,start_column=0,data_type=float):
@@ -181,12 +181,12 @@ def text_to_sparse(file_data,delim='\t',start_row=0,start_column=0,data_type=flo
             X_col.extend(col_ix)
             X_row.extend([row_ix - start_row] * len(col_ix))
             X_data.extend(rowdat[col_ix])
-    
+
     ncol = len(rowdat)
     nrow = row_ix - start_row + 1
-    
+
     E = scipy.sparse.coo_matrix((X_data, (X_row, X_col)), dtype=data_type, shape=(nrow, ncol))
-    
+
     return E
 
 ########## CELL FILTERING
@@ -269,7 +269,7 @@ def get_vscores(E, min_mean=0, nBins=50, fit_percentile=0.1, error_wt=1):
     return v_scores, CV_eff, CV_input, gene_ix, mu_gene, FF_gene, a, b
 
 def filter_genes(E, base_ix = [], min_vscore_pctl = 85, min_counts = 3, min_cells = 3, show_vscore_plot = False, sample_name = ''):
-    ''' 
+    '''
     Filter genes by expression level and variability
     Return list of filtered gene indices
     '''
@@ -285,7 +285,7 @@ def filter_genes(E, base_ix = [], min_vscore_pctl = 85, min_counts = 3, min_cell
     FF_gene = FF_gene[ix2]
     min_vscore = np.percentile(Vscores, min_vscore_pctl)
     ix = (((E[:,gene_ix] >= min_counts).sum(0).A.squeeze() >= min_cells) & (Vscores >= min_vscore))
-    
+
     if show_vscore_plot:
         import matplotlib.pyplot as plt
         x_min = 0.5*np.min(mu_gene)
@@ -331,9 +331,9 @@ def remove_corr_genes(E, gene_list, exclude_corr_genes_list, test_gene_idx, min_
 ########## CELL NORMALIZATION
 
 def tot_counts_norm(E, exclude_dominant_frac = 1, included = [], target_mean = 0):
-    ''' 
+    '''
     Cell-level total counts normalization of input counts matrix, excluding overly abundant genes if desired.
-    Return normalized counts, average total counts, and (if exclude_dominant_frac < 1) list of genes used to calculate total counts 
+    Return normalized counts, average total counts, and (if exclude_dominant_frac < 1) list of genes used to calculate total counts
     '''
 
     E = E.tocsc()
@@ -489,11 +489,11 @@ def get_spectral_clusters(A, k):
 def get_louvain_clusters(nodes, edges):
     import networkx as nx
     import community
-    
+
     G = nx.Graph()
     G.add_nodes_from(nodes)
     G.add_edges_from(edges)
-    
+
     return np.array(community.best_partition(G).values())
 
 
@@ -535,11 +535,11 @@ def get_force_layout(links, n_cells, n_iter=100, edgeWeightInfluence=1, barnesHu
 
 def save_hdf5_genes(E, gene_list, filename):
     '''SPRING standard: filename = main_spring_dir + "counts_norm_sparse_genes.hdf5"'''
-    
+
     import h5py
-    
+
     E = E.tocsc()
-    
+
     hf = h5py.File(filename, 'w')
     counts_group = hf.create_group('counts')
     cix_group = hf.create_group('cell_ix')
@@ -547,7 +547,7 @@ def save_hdf5_genes(E, gene_list, filename):
     hf.attrs['ncells'] = E.shape[0]
     hf.attrs['ngenes'] = E.shape[1]
 
-    for iG, g in enumerate(gene_list):
+    for iG, g in (enumerate(gene_list)-1):
         counts = E[:,iG].A.squeeze()
         cell_ix = np.nonzero(counts)[0]
         counts = counts[cell_ix]
@@ -555,13 +555,13 @@ def save_hdf5_genes(E, gene_list, filename):
         cix_group.create_dataset(g, data = cell_ix)
 
     hf.close()
-    
+
 def save_hdf5_cells(E, filename):
     '''SPRING standard: filename = main_spring_dir + "counts_norm_sparse_cells.hdf5" '''
     import h5py
-    
+
     E = E.tocsr()
-    
+
     hf = h5py.File(filename, 'w')
     counts_group = hf.create_group('counts')
     gix_group = hf.create_group('gene_ix')
@@ -577,7 +577,7 @@ def save_hdf5_cells(E, filename):
         gix_group.create_dataset(str(iC), data = gene_ix)
 
     hf.close()
-    
+
 def save_sparse_npz(E, filename, compressed = False):
     ''' SPRING standard: filename = main_spring_dir + "/counts_norm.npz"'''
     E = E.tocsc()
@@ -611,9 +611,9 @@ def get_color_stats_genes(color_stats, E, gene_list):
     stdevs = np.sqrt(sparse_var(E, 0))
     mins = E.min(0).todense().A1
     maxes = E.max(0).todense().A1
-    
+
     pctl = 99.6
-    pctl_n = (100-pctl) / 100. * E.shape[0]    
+    pctl_n = (100-pctl) / 100. * E.shape[0]
     pctls = np.zeros(E.shape[1], dtype=float)
     for iG in range(E.shape[1]):
         n_nonzero = E.indptr[iG+1] - E.indptr[iG]
@@ -648,7 +648,7 @@ def save_spring_dir_sparse_hdf5(E,gene_list,project_directory, edges, custom_col
     if not os.path.exists(project_directory):
         os.makedirs(project_directory)
 
-    if not project_directory[-1] == '/': 
+    if not project_directory[-1] == '/':
         project_directory += '/'
 
     # save custom colors
@@ -674,7 +674,7 @@ def save_spring_dir_sparse_hdf5(E,gene_list,project_directory, edges, custom_col
 #========================================================================================#
 
 def make_spring_subplot(E, gene_list, save_path, base_ix = None, normalize = True, exclude_dominant_frac = 1.0, min_counts = 3, min_cells = 5, min_vscore_pctl = 75,show_vscore_plot = False, exclude_gene_names = None, num_pc = 30, sparse_pca = False, pca_norm = True, k_neigh = 4, cell_groupings = {}, num_force_iter = 100, output_spring = True, precomputed_pca = None, gene_filter = None, custom_colors = {}, exclude_corr_genes_list = None, exclude_corr_genes_minCorr = 0.2, dist_metric = 'euclidean', use_approxnn=False, run_doub_detector = False, dd_k=50, dd_frac=5, dd_approx=True, tot_counts_final = None):
-    
+
     out = {}
     info_dict = {}
     info_dict['Date'] = '%s' %datetime.now()
@@ -704,7 +704,7 @@ def make_spring_subplot(E, gene_list, save_path, base_ix = None, normalize = Tru
         if gene_filter is None:
             # Get gene stats (above Poisson noise, i.e. V-scores)
             #print 'Filtering genes'
-            if (min_counts > 0) or (min_cells > 0) or (min_vscore_pctl > 0): 
+            if (min_counts > 0) or (min_cells > 0) or (min_vscore_pctl > 0):
                 gene_filter = filter_genes(E, base_ix, min_vscore_pctl=min_vscore_pctl, min_counts=min_counts,min_cells=min_cells,show_vscore_plot = show_vscore_plot)
 
                 info_dict['Gene_Var_Pctl'] = min_vscore_pctl
@@ -784,8 +784,8 @@ def make_spring_subplot(E, gene_list, save_path, base_ix = None, normalize = Tru
 
 
     if num_force_iter > 0:
-        positions = get_force_layout(links, Epca.shape[0], n_iter=num_force_iter, 
-            edgeWeightInfluence=1, barnesHutTheta=2, scalingRatio=1, gravity=0.05, 
+        positions = get_force_layout(links, Epca.shape[0], n_iter=num_force_iter,
+            edgeWeightInfluence=1, barnesHutTheta=2, scalingRatio=1, gravity=0.05,
             jitterTolerance=1, verbose=False)
         positions = positions / 5.0
         positions = positions - np.min(positions, axis = 0) - np.ptp(positions, axis = 0) / 2.0
@@ -797,10 +797,10 @@ def make_spring_subplot(E, gene_list, save_path, base_ix = None, normalize = Tru
         if num_force_iter > 0:
             np.savetxt(save_path + '/coordinates.txt',
                        np.hstack((np.arange(positions.shape[0])[:,None], positions)), fmt='%i,%.5f,%.5f')
-         
+
         with open(save_path+'/run_info.json','w') as f:
             f.write(json.dumps(info_dict,indent=4, sort_keys=True).decode('utf-8'))
-         
+
     return out
 
 #========================================================================================#
@@ -929,14 +929,11 @@ def rank_enriched_genes(E, gene_list, cell_mask, min_counts=3, min_cells=3):
     gix = (E[cell_mask,:]>=min_counts).sum(0).A.squeeze() >= min_cells
     print '%i cells in group' %(sum(cell_mask))
     print 'Considering %i genes' %(sum(gix))
-    
+
     gene_list = gene_list[gix]
-    
+
     z = sparse_zscore(E[:,gix])
     scores = z[cell_mask,:].mean(0).A.squeeze()
     o = np.argsort(-scores)
-    
+
     return gene_list[o], scores[o]
-
-
-

@@ -112,8 +112,8 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 
 # save master expression matrices
 
-print 'Saving hdf5 file for fast gene loading...'
-save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
+#print 'Saving hdf5 file for fast gene loading...'
+#save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
 
 ##############
 print 'Saving hdf5 file for fast cell loading...'
@@ -128,6 +128,15 @@ save_sparse_npz(E, main_spring_dir + 'counts_norm.npz', compressed = False)
 
 
 
+##Save SPRING files
+save_path = main_spring_dir + 'full'
 
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 3, min_cells = 3, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 4,
+                    num_force_iter = 500)
 
-##
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')

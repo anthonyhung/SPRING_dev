@@ -136,7 +136,7 @@ save_path = main_spring_dir + 'full'
 
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
-                    min_counts = 3, min_cells = 3, min_vscore_pctl = 85,show_vscore_plot = True,
+                    min_counts = 0, min_cells = 0, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 4,
                     num_force_iter = 500)

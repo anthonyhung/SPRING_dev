@@ -12,7 +12,7 @@ import numpy
 #Load in Data (Human)
 sample_name = ['GSE102580_filtered_normalized_counts_human']
 
-min_tot = [1000 for s in sample_name] # initial guess for total transcript counts threshold
+min_tot = [1 for s in sample_name] # initial guess for total transcript counts threshold
 nSamp = len(sample_name)
 input_path = 'filtered_normalized_counts/'
 
@@ -116,8 +116,8 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 
 # save master expression matrices
 
-#print 'Saving hdf5 file for fast gene loading...'
-#save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
+print 'Saving hdf5 file for fast gene loading...'
+save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
 
 ##############
 print 'Saving hdf5 file for fast cell loading...'

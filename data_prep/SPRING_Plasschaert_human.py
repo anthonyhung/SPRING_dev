@@ -102,7 +102,7 @@ E = scipy.sparse.vstack([D[s]['E'] for s in sample_name]).tocsc()
 # specifically, {path_to_SPRING}/datasets/{main_dataset_name}.
 # See example below, where springViewer_1_6_dev.html is located in ../
 
-main_spring_dir = '../datasets/Plasschaert_human_homeostasis/'
+main_spring_dir = '~/projects/SPRING_dev/datasets/Plasschaert_human_homeostasis/'
 
 if not os.path.exists(main_spring_dir):
     os.makedirs(main_spring_dir)
@@ -112,7 +112,7 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 
 # save master expression matrices
 
-#print 'Saving hdf5 file for fast gene loading...'
+print 'Saving hdf5 file for fast gene loading...'
 #save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
 
 ##############

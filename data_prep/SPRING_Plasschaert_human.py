@@ -116,7 +116,7 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 # save master expression matrices
 
 #print 'Saving hdf5 file for fast gene loading...'
-save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
+#save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
 
 ##############
 print 'Saving hdf5 file for fast cell loading...'

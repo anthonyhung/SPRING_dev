@@ -547,7 +547,7 @@ def save_hdf5_genes(E, gene_list, filename):
     hf.attrs['ncells'] = E.shape[0]
     hf.attrs['ngenes'] = E.shape[1]
 
-    for iG, g in range(E.shape[1]):
+    for iG, g in enumerate(gene_list):
         counts = E[:,iG].A.squeeze()
         cell_ix = np.nonzero(counts)[0]
         counts = counts[cell_ix]

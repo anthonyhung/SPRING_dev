@@ -3,7 +3,6 @@ matplotlib.use('Agg')
 from spring_helper import *
 from doublet_detector import *
 from collections import defaultdict
-import numpy as np
 
 # Adapted from SPRING example at https://github.com/AllonKleinLab/SPRING_dev/blob/master/data_prep/spring_example_HPCs.ipynb
 
@@ -35,7 +34,7 @@ for s in sample_name:
         D[s]['E'] = scipy.sparse.load_npz(input_path + s + '.raw_counts.unfiltered.npz')
     else:
         print 'Loading from text file'
-        D[s]['E'] = np.transpose(load_text(file_opener(input_path + s + '.tsv.gz'), delim = '\t'))
+        D[s]['E'] = load_text(file_opener(input_path + s + '.tsv.gz'), delim = '\t')
         scipy.sparse.save_npz(input_path + s + '.filtered_normalized_counts.npz', D[s]['E'], compressed = True)
     print D[s]['E'].shape
 

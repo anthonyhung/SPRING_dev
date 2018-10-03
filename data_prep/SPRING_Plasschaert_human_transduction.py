@@ -9,7 +9,7 @@ from collections import defaultdict
 
 
 #Load in Data (Human)
-sample_name = ['GSE102580_filtered_normalized_counts_human_transposed']
+sample_name = ['GSE102580_filtered_normalized_counts_human_viral_transduction_transposed']
 
 min_tot = [1 for s in sample_name] # initial guess for total transcript counts threshold
 nSamp = len(sample_name)
@@ -48,7 +48,7 @@ gene_list = np.array(load_genes(input_path + 'genes.txt'))
 
 #####filter by total counts
 # adjust total counts thresholds
-D['GSE102580_filtered_normalized_counts_human_transposed']['meta']['min_tot'] = 0
+D['GSE102580_filtered_normalized_counts_human_viral_transduction_transposed']['meta']['min_tot'] = 0
 
 
 for s in sample_name:
@@ -105,7 +105,7 @@ E = scipy.sparse.vstack([D[s]['E'] for s in sample_name]).tocsc()
 # specifically, {path_to_SPRING}/datasets/{main_dataset_name}.
 # See example below, where springViewer_1_6_dev.html is located in ../
 
-main_spring_dir = '/home/anthonyhung/projects/SPRING_dev/datasets/Plasschaert_human_homeostasis/'
+main_spring_dir = '/home/anthonyhung/projects/SPRING_dev/datasets/Plasschaert_human_transduction/'
 
 if not os.path.exists(main_spring_dir):
     os.makedirs(main_spring_dir)

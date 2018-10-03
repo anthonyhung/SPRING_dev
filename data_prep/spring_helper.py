@@ -51,7 +51,7 @@ def load_genes(filename, delimiter='\t', column=0, skip_rows=0):
     gene_list = []
     gene_dict = {}
 
-    with open(filename) as f:
+    with numpy.transpose(open(filename)) as f:
         for iL in range(skip_rows):
             f.readline()
         for l in f:

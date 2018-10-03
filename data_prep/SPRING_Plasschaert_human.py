@@ -9,7 +9,7 @@ from collections import defaultdict
 
 
 #Load in Data (Human)
-sample_name = ['GSE102580_filtered_normalized_counts_human']
+sample_name = ['GSE102580_filtered_normalized_counts_human_transposed']
 
 min_tot = [1 for s in sample_name] # initial guess for total transcript counts threshold
 nSamp = len(sample_name)

@@ -35,8 +35,6 @@ for s in sample_name:
     else:
         print 'Loading from text file'
         D[s]['E'] = load_text(file_opener(input_path + s + '.tsv.gz'), delim = '\t')
-    print D[s]['E'].shape
-
 gene_list = np.array(load_genes(input_path + 'genes.txt'))
 
 

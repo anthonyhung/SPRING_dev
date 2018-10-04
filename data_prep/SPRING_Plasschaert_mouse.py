@@ -9,7 +9,7 @@ from collections import defaultdict
 
 
 #Load in Data (Human)
-sample_name = ['GSE102580_filtered_normalized_counts_mouse']
+sample_name = ['GSE102580_filtered_normalized_counts_mouse_transposed']
 
 min_tot = [1 for s in sample_name] # initial guess for total transcript counts threshold
 nSamp = len(sample_name)
@@ -48,7 +48,7 @@ gene_list = np.array(load_genes(input_path + 'genes.txt'))
 
 #####filter by total counts
 # adjust total counts thresholds
-D['GSE102580_filtered_normalized_counts_mouse']['meta']['min_tot'] = 0
+D['GSE102580_filtered_normalized_counts_mouse_transposed']['meta']['min_tot'] = 0
 
 
 for s in sample_name:

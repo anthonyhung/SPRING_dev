@@ -105,7 +105,7 @@ E = scipy.sparse.vstack([D[s]['E'] for s in sample_name]).tocsc()
 # specifically, {path_to_SPRING}/datasets/{main_dataset_name}.
 # See example below, where springViewer_1_6_dev.html is located in ../
 
-main_spring_dir = '/home/anthonyhung/projects/SPRING_dev/datasets/Plasschaert_human_homeostasis/'
+main_spring_dir = '~/projects/SPRING_dev/datasets/Plasschaert_human_homeostasis/'
 
 if not os.path.exists(main_spring_dir):
     os.makedirs(main_spring_dir)
@@ -133,7 +133,6 @@ save_sparse_npz(E, main_spring_dir + 'counts_norm.npz', compressed = False)
 
 ##Save SPRING files
 save_path = main_spring_dir + 'full'
-print save_path
 
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,

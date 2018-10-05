@@ -139,7 +139,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
-                    k_neigh = 5,
+                    k_neigh = 10,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))

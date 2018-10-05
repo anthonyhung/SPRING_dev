@@ -116,11 +116,59 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 
 
 
+##Save SPRING files
+save_path = main_spring_dir + 'full_k=6'
+print save_path
+
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 6,
+                    num_force_iter = 500)
+
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
+
 
 
 
 ##Save SPRING files
-save_path = main_spring_dir + 'full'
+save_path = main_spring_dir + 'full_k=7'
+print save_path
+
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 7,
+                    num_force_iter = 500)
+
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
+
+
+
+
+##Save SPRING files
+save_path = main_spring_dir + 'full_k=8'
+print save_path
+
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 8,
+                    num_force_iter = 500)
+
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
+
+
+
+
+##Save SPRING files
+save_path = main_spring_dir + 'full_k=9'
 print save_path
 
 out = make_spring_subplot(E, gene_list, save_path,
@@ -128,6 +176,54 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 9,
+                    num_force_iter = 500)
+
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
+
+
+##Save SPRING files
+save_path = main_spring_dir + 'full_k=10'
+print save_path
+
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 10,
+                    num_force_iter = 500)
+
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
+
+
+
+
+##Save SPRING files
+save_path = main_spring_dir + 'full_k=11'
+print save_path
+
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 11,
+                    num_force_iter = 500)
+
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
+
+
+
+##Save SPRING files
+save_path = main_spring_dir + 'full_k=12'
+print save_path
+
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 12,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))

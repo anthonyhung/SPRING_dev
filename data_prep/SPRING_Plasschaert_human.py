@@ -35,10 +35,9 @@ for s in sample_name:
     else:
         print 'Loading from text file'
         D[s]['E'] = load_text(file_opener(input_path + s + '.tsv.gz'), delim = '\t')
-        scipy.sparse.save_npz(input_path + s + '.filtered_normalized_counts.npz', D[s]['E'], compressed = True)
     print D[s]['E'].shape
 
-gene_list = np.array(load_genes(input_path + 'genes.txt'))
+gene_list = np.array(load_genes(input_path + 'genes_human.txt'))
 
 
 
@@ -105,26 +104,14 @@ E = scipy.sparse.vstack([D[s]['E'] for s in sample_name]).tocsc()
 # specifically, {path_to_SPRING}/datasets/{main_dataset_name}.
 # See example below, where springViewer_1_6_dev.html is located in ../
 
-main_spring_dir = '~/projects/SPRING_dev/datasets/Plasschaert_human_homeostasis/'
+main_spring_dir = '../datasets/Plasschaert_human_homeostasis/'
+print main_spring_dir
 
 if not os.path.exists(main_spring_dir):
     os.makedirs(main_spring_dir)
 
 np.savetxt(main_spring_dir + 'genes.txt', gene_list, fmt='%s')
 np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
-
-# save master expression matrices
-
-print 'Saving hdf5 file for fast gene loading...'
-save_hdf5_genes(E, gene_list, main_spring_dir + 'counts_norm_sparse_genes.hdf5')
-
-##############
-print 'Saving hdf5 file for fast cell loading...'
-save_hdf5_cells(E, main_spring_dir + 'counts_norm_sparse_cells.hdf5')
-
-##############
-save_sparse_npz(E, main_spring_dir + 'counts_norm.npz', compressed = False)
-
 
 
 
@@ -133,7 +120,7 @@ save_sparse_npz(E, main_spring_dir + 'counts_norm.npz', compressed = False)
 
 ##Save SPRING files
 save_path = main_spring_dir + 'full'
-
+print save_path
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,

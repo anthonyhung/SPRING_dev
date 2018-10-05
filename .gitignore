@@ -1,0 +1,7 @@
+data_prep/filtered_normalized_counts/
+*.tsv.gz
+*.npz
+*.hdf5
+!datasets/Plasschaert_human_transduction/full/
+!datasets/Plasschaert_human_homeostasis/full/
+!datasets/Plasschaert_mouse/full/

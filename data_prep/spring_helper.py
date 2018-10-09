@@ -787,11 +787,11 @@ def make_spring_subplot(E, gene_list, save_path, base_ix = None, normalize = Tru
             custom_colors['Doublet Score'] = doub_score
 
         if len(cell_groupings) > 0:
-            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links), k_neigh
+            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links), k_neigh,
                             custom_colors = custom_colors,
                             cell_groupings = cell_groupings)
         else:
-            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links), k_neigh
+            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links), k_neigh,
                             custom_colors = custom_colors)
 
 

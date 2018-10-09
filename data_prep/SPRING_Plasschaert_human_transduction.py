@@ -128,7 +128,6 @@ out = make_spring_subplot(E, gene_list, save_path,
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
 np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
-np.savetxt(save_path + 'adjacency_matrix.txt', out['knn_graph'])
 
 
 
@@ -145,7 +144,6 @@ out = make_spring_subplot(E, gene_list, save_path,
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
 np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
-np.savetxt(save_path + 'adjacency_matrix.txt', out['knn_graph'])
 
 
 
@@ -162,7 +160,6 @@ out = make_spring_subplot(E, gene_list, save_path,
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
 np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
-np.savetxt(save_path + 'adjacency_matrix.txt', out['knn_graph'])
 
 
 
@@ -179,7 +176,6 @@ out = make_spring_subplot(E, gene_list, save_path,
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
 np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
-np.savetxt(save_path + 'adjacency_matrix.txt', out['knn_graph'])
 
 
 ##Save SPRING files
@@ -195,7 +191,6 @@ out = make_spring_subplot(E, gene_list, save_path,
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
 np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
-np.savetxt(save_path + 'adjacency_matrix.txt', out['knn_graph'])
 
 
 
@@ -211,9 +206,10 @@ out = make_spring_subplot(E, gene_list, save_path,
                     k_neigh = 11,
                     num_force_iter = 500)
 
+adjacency_matrix = build_adj_mat()
+
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
 np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
-np.savetxt(save_path + 'adjacency_matrix.txt', out['knn_graph'])
 
 
 
@@ -230,4 +226,3 @@ out = make_spring_subplot(E, gene_list, save_path,
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
 np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
-np.savetxt(save_path + 'adjacency_matrix.txt', out['knn_graph'])

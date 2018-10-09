@@ -670,6 +670,14 @@ def save_spring_dir_sparse_hdf5(E,gene_list,project_directory, edges, custom_col
     write_graph(project_directory + 'graph_data.json', E.shape[0], edges)
     write_edges(project_directory + 'edges.csv', edges)
 
+    # write adjacency matrix
+    M = build_adj_mat(edges, E.shape[0])
+    Mc = M.tocoo()
+
+    A= np.column_stack((Mc.row,Mc.col,Mc.data))
+    np.savetxt(project_directory + 'Adjacency_matrix.txt',A, fmt='%5.d',delimiter=',')
+
+
 
 #========================================================================================#
 

@@ -676,7 +676,6 @@ def save_spring_dir_sparse_hdf5(E,gene_list,project_directory, edges, k, custom_
 
     A= np.column_stack((Mc.row,Mc.col,Mc.data))
     np.savetxt(project_directory + 'Adjacency_matrix.csv', A, delimiter=',')
-    np.savetxt(project_directory + 'Adjacency_matrix_direct.csv', M, delimiter=',')
 
     # perform SpectralClustering on the adjacency matrix
     SC = get_spectral_clusters(A, k)

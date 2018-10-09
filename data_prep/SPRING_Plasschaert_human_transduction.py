@@ -48,7 +48,7 @@ gene_list = np.array(load_genes(input_path + 'genes_human.txt'))
 
 #####filter by total counts
 # adjust total counts thresholds
-D['GSE102580_filtered_normalized_counts_human_viral_transduction_transposed']['meta']['min_tot'] = 0
+D['GSE102580_filtered_normalized_counts_human_viral_transduction_transposed']['meta']['min_tot'] = 1
 
 
 for s in sample_name:

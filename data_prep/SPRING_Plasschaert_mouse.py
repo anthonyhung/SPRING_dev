@@ -48,7 +48,7 @@ gene_list = np.array(load_genes(input_path + 'genes_mouse.txt'))
 
 #####filter by total counts
 # adjust total counts thresholds
-D['GSE102580_filtered_normalized_counts_mouse_transposed']['meta']['min_tot'] = 0
+D['GSE102580_filtered_normalized_counts_mouse_transposed']['meta']['min_tot'] = 1
 
 
 for s in sample_name:
@@ -212,6 +212,20 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 11,
+                    num_force_iter = 500)
+
+np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
+np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
+
+##Save SPRING files
+save_path = main_spring_dir + 'full_k=12'
+print save_path
+
+out = make_spring_subplot(E, gene_list, save_path,
+                    normalize = False, tot_counts_final = total_counts,
+                    min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
+                    num_pc = 30,
+                    k_neigh = 12,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))

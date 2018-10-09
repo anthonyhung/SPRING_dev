@@ -643,7 +643,7 @@ def save_cell_groupings(filename, categorical_coloring_data):
     with open(filename,'w') as f:
         f.write(json.dumps(categorical_coloring_data,indent=4, sort_keys=True).decode('utf-8'))
 
-def save_spring_dir_sparse_hdf5(E,gene_list,project_directory, edges, custom_colors={}, cell_groupings={}, k):
+def save_spring_dir_sparse_hdf5(E,gene_list,project_directory, edges, k, custom_colors={}, cell_groupings={}):
 
     if not os.path.exists(project_directory):
         os.makedirs(project_directory)
@@ -787,14 +787,12 @@ def make_spring_subplot(E, gene_list, save_path, base_ix = None, normalize = Tru
             custom_colors['Doublet Score'] = doub_score
 
         if len(cell_groupings) > 0:
-            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links),
+            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links), k_neigh
                             custom_colors = custom_colors,
-                            cell_groupings = cell_groupings,
-                            k = k_neigh)
+                            cell_groupings = cell_groupings)
         else:
-            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links),
-                            custom_colors = custom_colors,
-                            k = k_neigh)
+            save_spring_dir_sparse_hdf5(E, gene_list, save_path, list(links), k_neigh
+                            custom_colors = custom_colors)
 
 
     if num_force_iter > 0:

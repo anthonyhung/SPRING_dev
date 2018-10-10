@@ -119,7 +119,7 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=5'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
@@ -135,7 +135,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=6'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
@@ -151,7 +151,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=7'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
@@ -169,7 +169,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=8'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
@@ -186,7 +186,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=9'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
@@ -202,7 +202,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=10'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
@@ -218,7 +218,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=11'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
@@ -234,7 +234,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 ##Save SPRING files
 save_path = main_spring_dir + 'full_k=12'
 print save_path
-with open(save_path + '/SpectralClusters.csv', newline='') as csvfile:
+with open(save_path + '/SpectralClusters.csv') as csvfile:
     spec_clusters = list(csv.reader(csvfile))
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,

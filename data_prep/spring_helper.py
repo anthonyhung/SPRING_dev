@@ -718,7 +718,7 @@ def make_spring_subplot(E, gene_list, save_path, base_ix = None, normalize = Tru
             # Get gene stats (above Poisson noise, i.e. V-scores)
             #print 'Filtering genes'
             if (min_counts > 0) or (min_cells > 0) or (min_vscore_pctl > 0):
-                gene_filter = filter_genes(E, base_ix, min_vscore_pctl=min_vscore_pctl, min_counts=min_counts,min_cells=min_cells,show_vscore_plot = show_vscore_plot)
+                gene_filter = filter_genes(E, base_ix, min_vscore_pctl=min_vscore_pctl, min_counts=min_counts,min_cells=min_cells)
 
                 info_dict['Gene_Var_Pctl'] = min_vscore_pctl
                 info_dict['Min_Cells'] = min_cells

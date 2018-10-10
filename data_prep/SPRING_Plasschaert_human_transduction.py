@@ -121,7 +121,7 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 save_path = main_spring_dir + 'full_k=6'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters.astype(int)
+
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
@@ -139,7 +139,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=7'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters.astype(int)
+
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
@@ -157,7 +157,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=8'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters.astype(int)
+
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
@@ -175,7 +175,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=9'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters.astype(int)
+
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
@@ -192,7 +192,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=10'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters.astype(int)
+
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
@@ -211,7 +211,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=11'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters.astype(int)
+
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
@@ -229,7 +229,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=12'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters.astype(int)
+
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,

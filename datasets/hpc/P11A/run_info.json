@@ -1,0 +1,11 @@
+{
+    "Date": "2018-10-10 14:10:48.676297", 
+    "Filtered_Genes": 876, 
+    "Gene_Var_Pctl": 85, 
+    "Min_Cells": 3, 
+    "Min_Counts": 3, 
+    "Nodes": 1384, 
+    "Num_Force_Iter": 200, 
+    "Num_Neighbors": 4, 
+    "Num_PCs": 30
+}

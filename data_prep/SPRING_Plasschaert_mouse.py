@@ -128,7 +128,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 5,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
@@ -144,7 +144,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 6,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
@@ -160,7 +160,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 7,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
@@ -178,7 +178,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 8,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
@@ -195,7 +195,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 9,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
@@ -211,7 +211,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 10,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
@@ -227,7 +227,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 11,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))
@@ -243,7 +243,7 @@ out = make_spring_subplot(E, gene_list, save_path,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,
                     num_pc = 30,
                     k_neigh = 12,
-                    cell_groupings = {},
+                    cell_groupings = spec_clusters,
                     num_force_iter = 500)
 
 np.save(save_path + '/cell_filter.npy', np.arange(E.shape[0]))

@@ -122,6 +122,7 @@ save_path = main_spring_dir + 'full_k=6'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
 spec_clusters=spec_clusters.astype('int64')
+print spec_clusters
 out = make_spring_subplot(E, gene_list, save_path,
                     normalize = False, tot_counts_final = total_counts,
                     min_counts = 1, min_cells = 1, min_vscore_pctl = 85,show_vscore_plot = True,

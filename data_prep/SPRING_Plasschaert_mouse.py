@@ -122,7 +122,7 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 save_path = main_spring_dir + 'full_k=5'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -140,7 +140,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=6'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -158,7 +158,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=7'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -178,7 +178,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=8'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -197,7 +197,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=9'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -215,7 +215,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=10'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -233,7 +233,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=11'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -251,7 +251,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=12'
 print save_path
 spec_clusters = pd.read_csv(save_path + '/SpectralClusters.csv', header=None)
-spec_clusters=spec_clusters.astype('int64')
+spec_clusters=spec_clusters.astype(str)
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,

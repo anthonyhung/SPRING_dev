@@ -121,7 +121,7 @@ np.savetxt(main_spring_dir + 'total_counts.txt', total_counts)
 save_path = main_spring_dir + 'full_k=6'
 print save_path
 spec_clusters = []
-with open(save_path + '/SpectralClusters.csv', newline='') as inputfile:
+with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0].astype(str))
 cell_groupings= {'cluster':spec_clusters}
@@ -143,7 +143,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=7'
 print save_path
 spec_clusters = []
-with open(save_path + '/SpectralClusters.csv', newline='') as inputfile:
+with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0].astype(str))
 cell_groupings= {'cluster':spec_clusters}
@@ -165,7 +165,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=8'
 print save_path
 spec_clusters = []
-with open(save_path + '/SpectralClusters.csv', newline='') as inputfile:
+with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0].astype(str))
 cell_groupings= {'cluster':spec_clusters}
@@ -187,7 +187,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=9'
 print save_path
 spec_clusters = []
-with open(save_path + '/SpectralClusters.csv', newline='') as inputfile:
+with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0].astype(str))
 cell_groupings= {'cluster':spec_clusters}
@@ -208,7 +208,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=10'
 print save_path
 spec_clusters = []
-with open(save_path + '/SpectralClusters.csv', newline='') as inputfile:
+with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0].astype(str))
 cell_groupings= {'cluster':spec_clusters}
@@ -231,7 +231,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=11'
 print save_path
 spec_clusters = []
-with open(save_path + '/SpectralClusters.csv', newline='') as inputfile:
+with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0].astype(str))
 cell_groupings= {'cluster':spec_clusters}
@@ -253,7 +253,7 @@ np.savetxt(save_path + '/cell_filter.txt',  np.arange(E.shape[0]), fmt='%i')
 save_path = main_spring_dir + 'full_k=12'
 print save_path
 spec_clusters = []
-with open(save_path + '/SpectralClusters.csv', newline='') as inputfile:
+with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0].astype(str))
 cell_groupings= {'cluster':spec_clusters}

@@ -37,3 +37,20 @@ Post-filter: 14163 barcodes
 ../datasets/Plasschaert_mouse/full_k=12
 /software/python-2.7.12-el7-x86_64/lib/python2.7/site-packages/sklearn/utils/graph.py:115: FutureWarning: Conversion of the second argument of issubdtype from `int` to `np.signedinteger` is deprecated. In future, it will be treated as `np.int64 == np.dtype(int).type`.
   if normed and (np.issubdtype(csgraph.dtype, np.int)
+_________________ GSE102580_filtered_normalized_counts_human_transposed
+Loading from text file
+(2970, 25475)
+GSE102580_filtered_normalized_counts_human_transposed 2970 / 2970 7380.809344747719 7566.885602946944
+---  GSE102580_filtered_normalized_counts_human_transposed ---
+Pre-filter: 2970 barcodes
+Post-filter: 2970 barcodes
+../datasets/Plasschaert_human_homeostasis/
+../datasets/Plasschaert_human_homeostasis/full_k=4
+../datasets/Plasschaert_human_homeostasis/full_k=5
+../datasets/Plasschaert_human_homeostasis/full_k=6
+../datasets/Plasschaert_human_homeostasis/full_k=7
+../datasets/Plasschaert_human_homeostasis/full_k=8
+../datasets/Plasschaert_human_homeostasis/full_k=9
+../datasets/Plasschaert_human_homeostasis/full_k=10
+../datasets/Plasschaert_human_homeostasis/full_k=11
+../datasets/Plasschaert_human_homeostasis/full_k=12

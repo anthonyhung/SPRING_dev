@@ -124,7 +124,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -145,7 +144,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -166,7 +164,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -189,7 +186,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -211,7 +207,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -232,7 +227,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -253,7 +247,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,
@@ -274,7 +267,6 @@ spec_clusters = []
 with open(save_path + '/SpectralClusters.csv') as inputfile:
     for row in csv.reader(inputfile):
         spec_clusters.append(row[0])
-spec_clusters=['{:.1f}'.format(x) for x in spec_clusters]
 cell_groupings= {'cluster':spec_clusters}
 dict.items(cell_groupings)
 out = make_spring_subplot(E, gene_list, save_path,

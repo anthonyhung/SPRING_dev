@@ -1,0 +1,346 @@
+_________________ GSE102580_filtered_normalized_counts_human_viral_transduction_transposed
+Loading from text file
+(19766, 25475)
+GSE102580_filtered_normalized_counts_human_viral_transduction_transposed 19766 / 19766 5807.673407190946 5848.085521346573
+---  GSE102580_filtered_normalized_counts_human_viral_transduction_transposed ---
+Pre-filter: 19766 barcodes
+Post-filter: 19766 barcodes
+../datasets/Plasschaert_human_transduction/
+../datasets/Plasschaert_human_transduction/full_k=6
+       0
+0      3
+1      3
+2      1
+3      2
+4      1
+5      3
+6      3
+7      3
+8      1
+9      2
+10     1
+11     3
+12     1
+13     3
+14     1
+15     0
+16     1
+17     1
+18     1
+19     4
+20     1
+21     1
+22     4
+23     3
+24     1
+25     1
+26     3
+27     3
+28     3
+29     3
+...   ..
+19736  0
+19737  0
+19738  0
+19739  2
+19740  0
+19741  0
+19742  0
+19743  2
+19744  2
+19745  4
+19746  0
+19747  0
+19748  0
+19749  2
+19750  0
+19751  0
+19752  0
+19753  0
+19754  2
+19755  0
+19756  0
+19757  0
+19758  0
+19759  4
+19760  2
+19761  2
+19762  0
+19763  0
+19764  0
+19765  0
+
+[19766 rows x 1 columns]
+Traceback (most recent call last):
+  File "SPRING_Plasschaert_human_transduction.py", line 132, in <module>
+    num_force_iter = 500)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 793, in make_spring_subplot
+    cell_groupings = cell_groupings)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 667, in save_spring_dir_sparse_hdf5
+    save_cell_groupings(project_directory+'categorical_coloring_data.json', categorical_coloring_data)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 644, in save_cell_groupings
+    f.write(json.dumps(categorical_coloring_data,indent=4, sort_keys=True).decode('utf-8'))
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/__init__.py", line 251, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: 0        3
+1        3
+2        1
+3        2
+4        1
+5        3
+6        3
+7        3
+8        1
+9        2
+10       1
+11       3
+12       1
+13       3
+14       1
+15       0
+16       1
+17       1
+18       1
+19       4
+20       1
+21       1
+22       4
+23       3
+24       1
+25       1
+26       3
+27       3
+28       3
+29       3
+        ..
+19736    0
+19737    0
+19738    0
+19739    2
+19740    0
+19741    0
+19742    0
+19743    2
+19744    2
+19745    4
+19746    0
+19747    0
+19748    0
+19749    2
+19750    0
+19751    0
+19752    0
+19753    0
+19754    2
+19755    0
+19756    0
+19757    0
+19758    0
+19759    4
+19760    2
+19761    2
+19762    0
+19763    0
+19764    0
+19765    0
+Name: 0, Length: 19766, dtype: int64 is not JSON serializable
+_________________ GSE102580_filtered_normalized_counts_mouse_transposed
+Loading from text file
+(14163, 28205)
+GSE102580_filtered_normalized_counts_mouse_transposed 14163 / 14163 6505.232351153662 7244.898751292238
+---  GSE102580_filtered_normalized_counts_mouse_transposed ---
+Pre-filter: 14163 barcodes
+Post-filter: 14163 barcodes
+../datasets/Plasschaert_mouse/
+../datasets/Plasschaert_mouse/full_k=5
+Traceback (most recent call last):
+  File "SPRING_Plasschaert_mouse.py", line 132, in <module>
+    num_force_iter = 500)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 793, in make_spring_subplot
+    cell_groupings = cell_groupings)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 667, in save_spring_dir_sparse_hdf5
+    save_cell_groupings(project_directory+'categorical_coloring_data.json', categorical_coloring_data)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 644, in save_cell_groupings
+    f.write(json.dumps(categorical_coloring_data,indent=4, sort_keys=True).decode('utf-8'))
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/__init__.py", line 251, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: 0        0
+1        0
+2        0
+3        0
+4        0
+5        0
+6        0
+7        0
+8        0
+9        4
+10       0
+11       0
+12       0
+13       0
+14       0
+15       0
+16       0
+17       0
+18       0
+19       0
+20       0
+21       1
+22       0
+23       0
+24       1
+25       0
+26       1
+27       0
+28       0
+29       0
+        ..
+14133    0
+14134    0
+14135    0
+14136    0
+14137    0
+14138    0
+14139    0
+14140    0
+14141    0
+14142    4
+14143    0
+14144    0
+14145    0
+14146    0
+14147    0
+14148    0
+14149    0
+14150    0
+14151    4
+14152    0
+14153    0
+14154    0
+14155    4
+14156    0
+14157    0
+14158    0
+14159    0
+14160    0
+14161    0
+14162    0
+Name: 0, Length: 14163, dtype: int64 is not JSON serializable
+_________________ GSE102580_filtered_normalized_counts_human_transposed
+Loading from text file
+(2970, 25475)
+GSE102580_filtered_normalized_counts_human_transposed 2970 / 2970 7380.809344747719 7566.885602946944
+---  GSE102580_filtered_normalized_counts_human_transposed ---
+Pre-filter: 2970 barcodes
+Post-filter: 2970 barcodes
+../datasets/Plasschaert_human_homeostasis/
+../datasets/Plasschaert_human_homeostasis/full_k=4
+Traceback (most recent call last):
+  File "SPRING_Plasschaert_human.py", line 135, in <module>
+    num_force_iter = 500)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 793, in make_spring_subplot
+    cell_groupings = cell_groupings)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 667, in save_spring_dir_sparse_hdf5
+    save_cell_groupings(project_directory+'categorical_coloring_data.json', categorical_coloring_data)
+  File "/home/anthonyhung/projects/SPRING_dev/data_prep/spring_helper.py", line 644, in save_cell_groupings
+    f.write(json.dumps(categorical_coloring_data,indent=4, sort_keys=True).decode('utf-8'))
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/__init__.py", line 251, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/software/python-2.7.12-el7-x86_64/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: 0       1
+1       0
+2       1
+3       1
+4       1
+5       2
+6       2
+7       2
+8       2
+9       2
+10      0
+11      1
+12      1
+13      0
+14      2
+15      2
+16      0
+17      2
+18      0
+19      1
+20      2
+21      2
+22      2
+23      2
+24      2
+25      2
+26      1
+27      0
+28      1
+29      3
+       ..
+2940    0
+2941    1
+2942    3
+2943    2
+2944    2
+2945    2
+2946    2
+2947    2
+2948    0
+2949    0
+2950    3
+2951    2
+2952    3
+2953    0
+2954    2
+2955    2
+2956    2
+2957    2
+2958    0
+2959    2
+2960    2
+2961    0
+2962    0
+2963    2
+2964    1
+2965    0
+2966    2
+2967    2
+2968    0
+2969    0
+Name: 0, Length: 2970, dtype: int64 is not JSON serializable
